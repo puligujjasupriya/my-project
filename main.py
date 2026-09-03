@@ -35,14 +35,14 @@ def get_db_connection():
 @app.get("/")
 def read_root():
     return {
-        "message": "Welcome to Flavorhouse Restaurant API",
+        "message": "hi to Flavorhouse Restaurant API",
         "docs": "/docs",
         "status": "operational",
     }
 
 
 @app.get("/menu-items")
-@app.get("/menu_items")
+#@app.get("/menu_items")
 def get_all_menu_items():
     conn = get_db_connection()
     cursor = conn.cursor()
